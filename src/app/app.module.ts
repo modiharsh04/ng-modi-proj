@@ -6,14 +6,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DashNavComponent} from './dash-nav/dash-nav.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MaterialModule} from './material.module';
-import {AboutComponent} from './about/about.component';
-import { DashAboutComponent } from './dash-about/dash-about.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import {DashAboutComponent} from './dash-about/dash-about.component';
 
 @NgModule({
   declarations: [
     DashNavComponent,
-    AboutComponent,
     DashAboutComponent
   ],
   imports: [

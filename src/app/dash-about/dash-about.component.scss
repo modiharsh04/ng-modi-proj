@@ -4,10 +4,20 @@
 
 .dashboard-card {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+}
+
+.image-card {
+  background-image: url("../../assets/images/hm.jpg");
+  background-size: cover;
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 16px;
+  bottom: 16px;
 }
 
 .more-button {
@@ -17,5 +27,6 @@
 }
 
 .dashboard-card-content {
-  text-align: center;
+  /*text-align: center;*/
+  word-break: break-word;
 }

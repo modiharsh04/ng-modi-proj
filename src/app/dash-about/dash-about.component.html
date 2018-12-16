@@ -1,12 +1,22 @@
 <div class="grid-container">
-  <mat-grid-list [cols]="gLCols | async" rowHeight="350px">
+  <mat-grid-list [cols]="4">
     <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
       <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title> {{card.title}} </mat-card-title>
+        <mat-card-header *ngIf="card.title">
+          <mat-card-title>
+          {{card.title}}
+          </mat-card-title>
         </mat-card-header>
         <mat-card-content class="dashboard-card-content">
-          <div>{{card.content}}</div>
+          <div class="image-card" *ngIf="card.id === 1"></div>
+          <p *ngIf="card.id === 3">
+          {{card.content}}
+          </p>
+          <div *ngIf="card.id === 2">
+            <ul *ngFor="let content of card.content">
+              <li>{{content}}</li>
+            </ul>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
