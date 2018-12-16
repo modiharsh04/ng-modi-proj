@@ -8,8 +8,8 @@
       <a mat-list-item href="#">About</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
+  <mat-sidenav-content class="content-container">
+    <mat-toolbar class="header" color="primary">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -20,8 +20,11 @@
       </button>
       <span>Harsh Modi</span>
     </mat-toolbar>
-    <Div class="main">
+    <div class="main">
       <router-outlet></router-outlet>
-    </Div>
+    </div>
+    <mat-toolbar class="footer" color="primary">
+      <span></span>
+    </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

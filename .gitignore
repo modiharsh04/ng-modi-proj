@@ -33,7 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-/docs/CNAME
+docs/CNAME
 
 # System Files
 .DS_Store

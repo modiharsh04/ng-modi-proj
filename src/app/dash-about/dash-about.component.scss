@@ -4,7 +4,6 @@
 }
 
 .leftGrid {
-  display: flex;
   flex-flow: column nowrap;
   max-width: 400px;
 }
@@ -12,5 +11,6 @@
 .dashboard-card {
   margin: 8px;
   flex: 1 1 auto;
+  border-radius: 8;
 }
 
