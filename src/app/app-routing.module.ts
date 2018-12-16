@@ -5,12 +5,12 @@ import {DashAboutComponent} from './dash-about/dash-about.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/about',
+    redirectTo: 'about',
     pathMatch: 'full',
   },
   {
     path: 'about',
-    component: DashAboutComponent
+    component: DashAboutComponent,
   },
 ];
 
