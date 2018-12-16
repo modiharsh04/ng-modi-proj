@@ -1,3 +1,3 @@
 # ModiProfile
 
-[Personal website] harshmodi.co
+Personal website:  https://harshmodi.co
