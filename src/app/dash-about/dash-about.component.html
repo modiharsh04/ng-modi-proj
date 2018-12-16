@@ -1,24 +1,34 @@
 <div class="grid-container">
-  <mat-grid-list [cols]="4">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header *ngIf="card.title">
-          <mat-card-title>
-          {{card.title}}
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div class="image-card" *ngIf="card.id === 1"></div>
-          <p *ngIf="card.id === 3">
-          {{card.content}}
-          </p>
-          <div *ngIf="card.id === 2">
-            <ul *ngFor="let content of card.content">
-              <li>{{content}}</li>
-            </ul>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="leftGrid">
+    <mat-card class="dashboard-card">
+      <mat-card-content>
+        <img src="/assets/images/hm.jpg" width="100%">
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="dashboard-card">
+      <mat-card-header>
+        <mat-card-title>About Me</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p style="text-align: justify-all">
+          A tech enthusiast and a lifelong learner. Programming and coding are my passion and enthusiasm that drives me
+          and my career. In addition to engineering software, I enjoy science, exploring new places, watching cricket,
+          trying different food, working with gadgets, and drinking Chai.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Summary</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <ul *ngFor="let line of summary">
+          <li>{{line}}</li>
+        </ul>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

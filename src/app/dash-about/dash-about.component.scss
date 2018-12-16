@@ -1,32 +1,16 @@
 .grid-container {
-  margin: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.leftGrid {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 400px;
 }
 
 .dashboard-card {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
+  margin: 8px;
+  flex: 1 1 auto;
 }
 
-.image-card {
-  background-image: url("../../assets/images/hm.jpg");
-  background-size: cover;
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  top: 16px;
-  bottom: 16px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.dashboard-card-content {
-  /*text-align: center;*/
-  word-break: break-word;
-}

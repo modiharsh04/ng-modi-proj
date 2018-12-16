@@ -352,8 +352,6 @@ MIT
 
 @angular/material/card
 
-@angular/material/grid-list
-
 @angular/animations
 MIT
 
