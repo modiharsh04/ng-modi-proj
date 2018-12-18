@@ -7,6 +7,7 @@ import {DashNavComponent} from './dash-nav/dash-nav.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MaterialModule} from './material.module';
 import {DashAboutComponent} from './dash-about/dash-about.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {DashAboutComponent} from './dash-about/dash-about.component';
     BrowserAnimationsModule,
     LayoutModule,
     MaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [DashNavComponent]

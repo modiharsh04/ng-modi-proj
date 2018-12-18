@@ -3,7 +3,6 @@
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
-    <mat-toolbar>Explore</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">About</a>
     </mat-nav-list>
@@ -23,8 +22,25 @@
     <div class="main">
       <router-outlet></router-outlet>
     </div>
-    <mat-toolbar class="footer" color="primary">
-      <span></span>
+    <mat-toolbar class="footer" [ngClass]="{'space-around':isHandset$ | async}" color="primary">
+      <a mat-icon-button mat-raised-button href="https://github.com/modiharsh04">
+        <mat-icon svgIcon="gh-ic"></mat-icon>
+      </a>
+      <a mat-icon-button mat-raised-button href="https://www.linkedin.com/in/harsh-modi-36011568">
+        <mat-icon svgIcon="in-ic"></mat-icon>
+      </a>
+      <a mat-icon-button mat-raised-button href="https://www.facebook.com/modiharsh19">
+        <mat-icon svgIcon="fb-ic"></mat-icon>
+      </a>
+      <a mat-icon-button mat-raised-button href="https://www.instagram.com/modi.harsh04">
+        <mat-icon svgIcon="i-ic"></mat-icon>
+      </a>
+      <a mat-icon-button
+         mat-raised-button
+         target="_blank"
+         href="mailto:modi.harsh04@gmail.com?subject=Let's be friend awesome developer!">
+        <mat-icon>email</mat-icon>
+      </a>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

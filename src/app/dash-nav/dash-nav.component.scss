@@ -15,7 +15,7 @@
   z-index: 1;
 }
 
-.content-container{
+.content-container {
   display: flex;
   flex: 1 1 auto;
   flex-flow: column nowrap;
@@ -31,4 +31,21 @@
   flex: 0 0 auto;
   z-index: 1;
   flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@import "../../theme.sass";
+
+.mat-icon {
+  height: 32px;
+  width: 32px;
+  border: white 3px solid;
+  border-radius: 100%;
+  background: white;
+  color: mat-color($primary);
+}
+
+.space-around {
+  justify-content: space-between;
 }

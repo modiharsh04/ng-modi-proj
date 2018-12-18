@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {Component} from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {MatIconRegistry} from '@angular/material';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dash-nav',
@@ -15,6 +17,18 @@ export class DashNavComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
-
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private breakpointObserver: BreakpointObserver) {
+    iconRegistry.addSvgIcon(
+      'gh-ic',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/gh.svg'));
+    iconRegistry.addSvgIcon(
+      'fb-ic',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/fb.svg'));
+    iconRegistry.addSvgIcon(
+      'i-ic',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/i.svg'));
+    iconRegistry.addSvgIcon(
+      'in-ic',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/in.svg'));
+  }
 }
