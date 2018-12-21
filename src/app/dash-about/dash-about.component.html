@@ -1,5 +1,5 @@
 <div class="grid-container">
-  <div class="leftGrid">
+  <div class="leftGrid" [class.limitWidth]="!(isHandset$ | async)">
     <mat-card class="dashboard-card">
       <mat-card-content>
         <img src="/assets/images/hm.jpg" width="100%">
